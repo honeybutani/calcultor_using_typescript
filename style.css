@@ -1,0 +1,83 @@
+
+button {
+  width: 110;
+  height: 110;
+  font-size: 55;
+}
+/* css applied to input n output window */
+.textinput {
+  width: 300px;
+  height: 50;
+  border: 0px solid gray;
+  font-size: 28px;
+  background-color: #d4d4d4;
+}
+/* css applied to whole content */
+.main {
+  position: relative;
+  border: solid;
+  top:20%;
+  min-height: 450px;
+  width: min-content;
+  background-color: #d4d4d4;
+  margin-left: 40%;
+  margin-top: 5%;
+  
+}
+.numb {
+  background-color: #fcfcfc;
+  height: 44px;
+  width: 56px;
+  text-align: center;
+  border: 0px solid #fcfcfc;
+}
+.numb:hover {
+  background-color: rgb(196, 194, 194);
+}
+
+.buttonclass {
+  background-color: rgb(216, 216, 216);
+  height: 44px;
+  width: 56px;
+  text-align: center;
+  border: 0px solid #f3f3f3;
+}
+/* hover effect */
+.buttonclass:hover,
+.memoryclass:hover,
+#degree:hover,
+#farnaiate:hover,
+#trignometric:hover,
+#function:hover {
+  background-color: gray;
+}
+.inputtable {
+  margin-top: 3px;
+  border: 0px solid #f3f3f3;
+  padding-bottom: 0px;
+}
+#trignometric,
+#function {
+  height: 38px;
+  width: 116px;
+  text-align: center;
+  border: 0px solid #f3f3f3;
+  background-color: #d4d4d4;
+}
+#degree,
+#farnaiate {
+  background-color: #d4d4d4;
+  height: 44px;
+  width: 56px;
+  text-align: center;
+  border: 0px solid #f3f3f3;
+  margin: 5px;
+}
+.memoryclass {
+  margin-bottom: 5px;
+  border: none;
+  height: 44px;
+  width: 56px;
+  text-align: center;
+  background-color: #d4d4d4;
+}
