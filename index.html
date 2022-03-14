@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class=main>
+    <!-- input window -->
+    <form name="tabform">
+      <input name="textinput" class="textinput" id="inputform" />
+    </form>
+    <!-- output window -->
+    <form name="tab1form">
+      <input name="textinput" class="textinput" value="0" id="outputform" />
+    </form>
+    <!-- all buttons are inside table and have onclick function -->
+    <table class="inputtable" align="center">
+      <div class="degclass">
+        <button class="button" id="degree" onclick="degreefunction()">DEG</button>
+        <button class="button" id="farnaiate" onclick="farnaiatefunction()">F-E</button>
+      </div>
+      <div class="flex">
+        <button class="memoryclass" onclick="memoryclearfunction()" id="memoryclear" disabled="">MC</button>
+        <button class="memoryclass" onclick="memoryreadfunction()" id="memoryread" disabled="">MR</button>
+        <button class="memoryclass" onclick="memoryplusfunction()">M+</button>
+        <button class="memoryclass" onclick="memoryminusfunction()">M-</button>
+        <button class="memoryclass" onclick="memorysavefunction()">MS</button>
+      </div>
+      <div class="trigoclass ">
+        <select id="trignometric" onclick="gettrignometricOption()">
+          <option value="Trignometry"> ◭ Trignometry</option>
+          <option value="sin">sin</option>
+          <option value="cos">cos</option>
+          <option value="tan">tan</option>
+        </select>
+
+        <select id="function" onclick="getfunctionOption()">
+          <option value="Function">Ƒ Function</option>
+          <option value="random">random</option>
+          <option value="ceil">ceil</option>
+          <option value="floor">floor</option>
+        </select>
+      </div>
+      <tr>
+        <td><button class="buttonclass" onclick="changefunction()" id="functionchange">2<sup>nd</sup></button></td>
+        <td><button class="buttonclass" onclick="insert(3.14)">π</button></td>
+        <td><button class="buttonclass" onclick="insert(Math.E)">e</button></td>
+        <td><button class="buttonclass" onclick="clean()">C</button></td>
+        <td><button class="buttonclass" onclick="back()">⌫</button></td>
+
+      </tr>
+      <tr>
+        <td><button class="buttonclass changebuttonclass" id="xsquare" onclick="square()">x²</button></td>
+        <td><button class="buttonclass" onclick="dividenumber('1/x')">1/x</button></td>
+        <td><button class="buttonclass" onclick="modes()">|x|</button></td>
+        <td><button class="buttonclass" onclick="expfunction('exp')">exp</button></td>
+        <td><button class="buttonclass" onclick="insert('%')">mod</button></td>
+      </tr>
+      <tr>
+        <td><button class="buttonclass changebuttonclass" id="squareroot" onclick="sqrt2()">√</button></td>
+        <td><button class="buttonclass" onclick="insert('(')">(</button></td>
+        <td><button class="buttonclass" onclick="insert(')')">)</button></td>
+        <td><button class="buttonclass" onclick="factorial('n')">n!</button></td>
+        <td><button class="buttonclass" onclick="insert('/')">/</button></td>
+      <tr>
+        <td><button class="buttonclass" onclick="insert('**')">x<sup>y</sup></button></td>
+        <td><button class="numb" id="seven" onclick="insert(7)">7</button></td>
+        <td><button class="numb" onclick="insert(8)">8</button></td>
+        <td><button class="numb" onclick="insert(9)">9</button></td>
+        <td><button class="buttonclass" onclick="insert('*')">X</button></td>
+      </tr>
+      <tr>
+        <td><button class="buttonclass changebuttonclass" id="tenx" onclick="baseten()">10<sup>x</sup></button></td>
+        <td><button class="numb" onclick="insert(4)">4</button></td>
+        <td><button class="numb" onclick="insert(5)">5</button></td>
+        <td><button class="numb" onclick="insert(6)">6</button></td>
+        <td><button class="buttonclass" onclick="insert('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="buttonclass changebuttonclass" id="logten" onclick="logfunction('log')">log</button></td>
+        <td><button class="numb" onclick="insert(1)">1</button></td>
+        <td><button class="numb" onclick="insert(2)">2</button></td>
+        <td><button class="numb" onclick="insert(3)">3</button></td>
+        <td><button class="buttonclass" onclick="insert('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button class="buttonclass changebuttonclass" id="lnx" onclick="lnfunction('ln')">ln</button></td>
+        <td><button class="numb" onclick="checksign()">+/-</button></td>
+        <td><button class="numb" onclick="insert(0)">0</button></td>
+        <td><button class="numb" onclick="insert('.')">.</button></td>
+        <td><button class="buttonclass" onclick="calculate()">=</button></td>
+      </tr>
+
+    </table>
+
+  </div>
+  <script src="dist/calculator.js" type="text/javascript">
+  </script>
+</body>
+
+</html>
